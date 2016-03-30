@@ -1,0 +1,36 @@
+<!-- app/views/cats/new.html.erb -->
+<h1>Add new Cat</h1>
+
+<%= render partial: "form", locals: {cat: @cat} %>
+
+
+<!-- <form action="/cats" method="post">
+
+  <p>Name:</p>
+  <p>Cat Name: <input name="name"></p>
+
+  <p>Sex</p>
+  <p><input type="radio" name="sex" value = "M"> Male</p>
+  <p><input type="radio" name="sex" value = "F"> Female</p>
+
+  <p>Birth Date</p>
+  <input name="birth_date" type="date" value="birth_date">
+
+
+  <p>Color</p>
+  <select name="color">
+    <option  value="null"></option>
+    <option  value="violet">Violet</option>
+    <option  value="indigo">Indigo</option>
+    <option  value="blue">Blue</option>
+    <option  value="green">Green</option>
+  </select>
+
+
+<p>Write about your cat</p>
+<p><textarea name="description" >  </textarea></p>
+
+
+<input type="submit" value="Create cat">
+
+</form> -->

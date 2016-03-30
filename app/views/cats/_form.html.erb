@@ -1,0 +1,38 @@
+
+<% action_url = @cat.persisted? ? cat_url(cat) : cats_url %>
+<% request = @cat.persisted? ? "PATCH" : "POST"%>
+
+<form action="<%= action_url %>" method="post">
+  <input type="hidden" name="_method" value="<%= request %>">
+
+  <p>Cat Name: <input name="name" value=<%= @cat.name %> ></p>
+
+  <p>Sex</p>
+  <p><input type="radio" name="sex" value = "M" <%= "checked='checked'" if @cat.sex == "M"%>> Male</p>
+  <p><input type="radio" name="sex" value = "F" <%= "checked='checked'" if @cat.sex == "F"%>> Female</p>
+
+  <p>Birth Date</p>
+  <input name="birth_date" type="date" value=<%= @cat.birth_date %>>
+
+
+  <p>Color</p>
+  <select name="color" >
+    <% if @cat.persisted? %>
+      <option  value="<%= @cat.color%>" > <%= @cat.color.capitalize %> </option>
+    <% else %>
+      <option  value="null"></option>
+    <% end %>
+    <option  value="violet">  Violet    </option>
+    <option  value="indigo">  Indigo    </option>
+    <option  value="blue">  Blue    </option>
+    <option  value="green">  Green    </option>
+  </select>
+
+
+<p>Write about your cat</p>
+<p><textarea name="description"  > <%= @cat.description %> </textarea></p>
+
+
+<input type="submit" value="Edit cat">
+
+</form>

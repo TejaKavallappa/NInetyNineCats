@@ -1,0 +1,17 @@
+<!-- app/views/cats/show.html.erb -->
+<h1> <%= @cat.name %> </h1>
+
+<table style="width:50%">
+    <tr>
+        <td>Age</td>
+        <td>Color</td>
+        <td>Sex</td>
+        <td>Description</td>
+    </tr>
+    <tr>
+        <td> <%= @cat.age %> </td>
+        <td><%= @cat.color %> </td>
+        <td><%= @cat.sex %> </td>
+        <td><%= @cat.description %> </td>
+    </tr>
+</table>
